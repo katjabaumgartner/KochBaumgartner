@@ -1,5 +1,6 @@
 def setup():
     size(400, 400)
+    background(200, 200, 200)
 
 
 def draw():
