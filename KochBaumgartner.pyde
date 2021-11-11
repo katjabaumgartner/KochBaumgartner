@@ -4,7 +4,7 @@ def setup():
     textSize(15)
     
 def draw():
- #Farbveränderung durch Mouse   
+#Farbveränderung durch Mouse   
     b = (mouseY / 3)
     g = 255
     r = 51
@@ -42,9 +42,15 @@ def draw():
     
     background(r,g,b)
     
-      #sich wiederholende draw Funktion Achse mit Text
-    text("Luftfeuchtigkeit", 480, 580)
-    text("Temperatur", 2, 20)
+#sich wiederholende draw Funktion Achse mit Text
+    text("Luftfeuchtigkeit %", 460, 595)
+    text("Temperatur Grad C", 2, 20)
     fill(0,0,0)
     line(40, 560, 560, 560)
     line(40, 560, 40, 40)
+    text("30", 20, 60)
+    text("15", 20, 270)
+    text("0", 20, 560)
+    text("0", 40, 580)
+    text("50", 270, 580)
+    text("100", 540, 580)
