@@ -2,7 +2,9 @@
 def setup():
     size(600, 600) 
     textSize(15)
-    
+
+
+
 def draw():
 #Farbveränderung durch Mouse   
     b = (mouseY / 3)
@@ -54,3 +56,14 @@ def draw():
     text("0", 40, 580)
     text("50", 270, 580)
     text("100", 540, 580)
+   
+#Bilder laden
+    bilder = []
+    for i in range(0, 8):
+        bilder.append(loadImage("bild"+str(i + 1) +".png"))
+  
+    image(bilder[0], 400, 45)
+    image(bilder[1], 400, 450)
+    image(bilder[2], 150, 45)
+    image(bilder[3], 60, 45)
+        
