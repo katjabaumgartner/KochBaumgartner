@@ -59,13 +59,10 @@ def draw():
    
 #Bilder laden
     bilder = []
-    for i in range(0, 8):
+    for i in range(0, 16):
         bilder.append(loadImage("bild"+str(i + 1) +".png"))
         
-    if mouseY>500 and mouseX>500: image(bilder[6], 240, 180)
-  
-    image(bilder[0], 400, 45)
-    image(bilder[1], 400, 450)
-    image(bilder[2], 150, 45)
-    image(bilder[3], 60, 45)
-       
+    if mouseY>450 and mouseX>450: image(bilder[15], 240, 180)
+    elif mouseY>450 and 300<mouseX<450: image(bilder[14], 240, 180)
+    elif mouseY>450 and 150<mouseX<300: image(bilder[13], 240, 180)
+    elif mouseY>450 and mouseX<150: image(bilder[12], 240, 180) 
