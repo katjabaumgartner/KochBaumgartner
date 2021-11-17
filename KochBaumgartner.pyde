@@ -66,3 +66,7 @@ def draw():
     elif mouseY>450 and 300<mouseX<450: image(bilder[14], 240, 180)
     elif mouseY>450 and 150<mouseX<300: image(bilder[13], 240, 180)
     elif mouseY>450 and mouseX<150: image(bilder[12], 240, 180) 
+    elif mouseY>100 and mouseX>450: image(bilder[0], 240, 180)
+    elif mouseY>100 and 300<mouseX<450: image(bilder[1], 240, 180)
+    elif mouseY<100 and 150<mouseX<300: image(bilder[2], 240, 180)
+    elif mouseY<100 and mouseX<150: image(bilder[3], 240, 180)
