@@ -43,7 +43,7 @@ def draw():
     print(r)
     
     background(r,g,b)
-    
+#parametrisierung (x,y veränderbar)    
     x= 40
     y= 560
     
