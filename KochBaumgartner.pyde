@@ -1,10 +1,7 @@
-
-def setup():
+def setup(): 
     size(600, 600) 
     textSize(15)
-
-
-
+   
 def draw():
 #Farbveränderung durch Mouse   
     b = (mouseY / 3)
@@ -43,13 +40,21 @@ def draw():
     print(r)
     
     background(r,g,b)
+    
+#Titel
+    font = createFont("Comic Sans MS", 30)
+    textFont(font)
+    text("Behaglichkeitsdiagramm", 150, 40)
+    
 #parametrisierung (x,y veränderbar)    
     x= 40
     y= 560
     
-#sich wiederholende draw Funktion Achse mit Text
-    text("Luftfeuchtigkeit %", 460, 595)
-    text("Temperatur Grad C", 2, 20)
+#sich wiederholende draw Funktion Achse mit Text 
+    font = createFont("Century Gotic",15)
+    textFont(font)
+    text("Luftfeuchtigkeit %", x+420, y+35)
+    text("Grad Celsius", x-38, y-540)
     fill(0,0,0)
     line(x, y, x+520, y)
     line(x, y, x, y-520)
@@ -69,19 +74,19 @@ def draw():
     for i in range(0, 16):
         bilder.append(loadImage("bild"+str(i + 1) +".png"))
         
-    if y>mouseY>y-125 and mouseX>x+410: image(bilder[15], 240, 180)
-    elif y>mouseY>y-125 and x+250<mouseX<x+375: image(bilder[14], 240, 180)
-    elif y>mouseY>y-125 and x+125<mouseX<x+250: image(bilder[13], 240, 180)
-    elif y>mouseY>y-125 and x<mouseX<x+125: image(bilder[12], 240, 180) 
-    elif y-125>mouseY>y-250 and mouseX>x+375: image(bilder[11], 240, 180)
-    elif y-125>mouseY>y-250 and x+250<mouseX<x+375: image(bilder[10], 240, 180)
-    elif y-125>mouseY>y-250 and x+125<mouseX<x+250: image(bilder[9], 240, 180)
-    elif y-125>mouseY>y-250 and x<mouseX<x+125: image(bilder[8], 240, 180) 
-    elif y-250>mouseY>y-375 and mouseX>x+375: image(bilder[7], 240, 180)
-    elif y-250>mouseY>y-375 and x+250<mouseX<x+375: image(bilder[6], 240, 180)
-    elif y-250>mouseY>y-375 and x+125<mouseX<x+250: image(bilder[5], 240, 180)
-    elif y-250>mouseY>y-375 and x<mouseX<x+125: image(bilder[4], 240, 180) 
-    elif mouseY<y-375 and mouseX>x+375: image(bilder[3], 240, 180)
-    elif mouseY<y-375 and x+250<mouseX<x+375: image(bilder[2], 240, 180)
-    elif mouseY<y-375 and x+125<mouseX<x+250: image(bilder[1], 240, 180)
-    elif mouseY<y-375 and x<mouseX<x+125: image(bilder[0], 240, 180)
+    if y>mouseY>y-125 and mouseX>x+410: image(bilder[15], x+180, y-380)
+    elif y>mouseY>y-125 and x+250<mouseX<x+375: image(bilder[14], x+180, y-380)
+    elif y>mouseY>y-125 and x+125<mouseX<x+250: image(bilder[13], x+180, y-380)
+    elif y>mouseY>y-125 and x<mouseX<x+125: image(bilder[12], x+180, y-380) 
+    elif y-125>mouseY>y-250 and mouseX>x+375: image(bilder[11], x+180, y-380)
+    elif y-125>mouseY>y-250 and x+250<mouseX<x+375: image(bilder[10], x+180, y-380)
+    elif y-125>mouseY>y-250 and x+125<mouseX<x+250: image(bilder[9], x+180, y-380)
+    elif y-125>mouseY>y-250 and x<mouseX<x+125: image(bilder[8], x+180, y-380) 
+    elif y-250>mouseY>y-375 and mouseX>x+375: image(bilder[7], x+180, y-380)
+    elif y-250>mouseY>y-375 and x+250<mouseX<x+375: image(bilder[6], x+180, y-380)
+    elif y-250>mouseY>y-375 and x+125<mouseX<x+250: image(bilder[5], x+180, y-380)
+    elif y-250>mouseY>y-375 and x<mouseX<x+125: image(bilder[4], x+180, y-380) 
+    elif mouseY<y-375 and mouseX>x+375: image(bilder[3], x+180, y-380)
+    elif mouseY<y-375 and x+250<mouseX<x+375: image(bilder[2], x+180, y-380)
+    elif mouseY<y-375 and x+125<mouseX<x+250: image(bilder[1], x+180, y-380)
+    elif mouseY<y-375 and x<mouseX<x+125: image(bilder[0], x+180, y-380)
