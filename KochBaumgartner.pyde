@@ -39,8 +39,8 @@ def draw():
 
     
     print(b)
-    print (g)
-    print (r)
+    print(g)
+    print(r)
     
     background(r,g,b)
     
